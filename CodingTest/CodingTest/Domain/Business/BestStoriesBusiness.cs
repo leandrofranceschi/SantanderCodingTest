@@ -116,7 +116,7 @@ namespace CodingTest.API.Domain.Business
             }
             Cache.CacheBestStories.Set(ResultList);
 
-            return ResultList.Take(Cache.MainCache.AmountItens).ToList();
+            return ResultList.Take(Cache.MainCache.AmountItens).OrderByDescending(x => x.score).ToList();
         }
 
         /// <summary>
