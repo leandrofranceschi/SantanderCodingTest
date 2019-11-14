@@ -10,6 +10,10 @@ namespace CodingTest.API.Domain.Business
 {
     public class BestStories
     {
+        /// <summary>
+        /// Get BestStories 
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Story>> GetAsync()
         {
             
@@ -27,6 +31,10 @@ namespace CodingTest.API.Domain.Business
 
         }
 
+        /// <summary>
+        /// Get Online BestStories or Cache BestStories
+        /// </summary>
+        /// <returns></returns>
         private async Task<List<Story>> BestStoriesGetOnlineAsync()
         {
             List<Story> result = new List<Story>();
@@ -50,7 +58,10 @@ namespace CodingTest.API.Domain.Business
         }
 
 
-
+        /// <summary>
+        /// Get Online StoriesList
+        /// </summary>
+        /// <returns></returns>
         private async Task<List<int>> GetStoriesList()
         {
             List<int> ResultList = new List<int>();
@@ -66,6 +77,11 @@ namespace CodingTest.API.Domain.Business
             return ResultList.Take(Cache.MainCache.AmountItens).ToList();
         }
 
+        /// <summary>
+        ///  Get Online StoriesDetais
+        /// </summary>
+        /// <param name="StoriesCodesList"></param>
+        /// <returns></returns>
         private async Task<List<Story>> GetStoriesDetaisAsync(List<int> StoriesCodesList)
         {
             
@@ -103,6 +119,11 @@ namespace CodingTest.API.Domain.Business
             return ResultList.Take(Cache.MainCache.AmountItens).ToList();
         }
 
+        /// <summary>
+        /// Handle with Time
+        /// </summary>
+        /// <param name="UnixTimeStr"></param>
+        /// <returns></returns>
         private string handleTime( dynamic UnixTimeStr)
         {
             long LongTime;
@@ -112,6 +133,11 @@ namespace CodingTest.API.Domain.Business
             return TimeFormated;
         }
 
+        /// <summary>
+        /// Format Time
+        /// </summary>
+        /// <param name="unixDateTime"></param>
+        /// <returns></returns>
         private string UnixUnFormat(long unixDateTime)
         {
             //System.DateTime dateTime = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);

@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace CodingTest.API.Domain.Models
 {
+    /// <summary>
+    /// Story Class
+    /// </summary>
     public class Story
     {
         public string title { get; set; }

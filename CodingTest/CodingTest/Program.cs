@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-
 namespace CodingTest.API
 {
     public class Program

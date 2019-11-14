@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CodingTest.API.Cache
 {
-
-
-
+    /// <summary>
+    /// Main System Cache Class
+    /// </summary>
     public static class MainCache
     {
      
@@ -33,6 +33,9 @@ namespace CodingTest.API.Cache
         }    
     }
 
+    /// <summary>
+    /// Best Stories Cache Class
+    /// </summary>
     public static class CacheBestStories
     {
         public static List<Story> BestStoriesList;

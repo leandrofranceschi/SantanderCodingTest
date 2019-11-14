@@ -24,7 +24,7 @@ namespace CodingTest.API
 
         public static IConfiguration Configuration { get; set; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -40,7 +40,6 @@ namespace CodingTest.API
             services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
             services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
             services.AddHttpContextAccessor();
-
 
             int ApiVer = Convert.ToInt32(Startup.Configuration.GetSection("ApiVersion").Value);
 
